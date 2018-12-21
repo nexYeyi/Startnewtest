@@ -12,13 +12,12 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <TextView
+        <ImageView
+            android:src="@drawable/logo"
+            android:layout_marginBottom="20dp"
             android:layout_width="wrap_content"
             android:layout_height="72sp"
-            android:layout_gravity="center_horizontal"
-            android:text="Login"
-            android:textSize="50sp"
-            android:textColor="@color/colorPrimary"/>
+            android:layout_gravity="center_horizontal" />
 
         <!--  Email Label -->
         <android.support.design.widget.TextInputLayout

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#008577</color>
+    <color name="colorPink">#fb7299</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="primary">#E43F3F</color>
@@ -19,4 +21,10 @@
     <color name="base">#AAAAAA</color>
     <color name="iron">#CCCCCC</color>
     <color name="white">#FFFFFF</color>
+    <color name="lightblue">#0277BD</color>
+    <color name="yellow">#fff2cc</color>
+    <color name="test1">#cfe2f3</color>
+    <color name="test2">#b6d7a8</color>
+    <color name="test3">#3399ff</color>
+
 </resources>
