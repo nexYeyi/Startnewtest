@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/shouye"
+            android:title="首页">
+
+        </item>
+
+        <item
+            android:id="@+id/xiugai"
+            android:title="修改个人信息">
+
+        </item>
+
+        <item
+            android:id="@+id/tuideng"
+            android:title="退出登录">
+
+        </item>
+
+
+    </group>
+
+</menu>
