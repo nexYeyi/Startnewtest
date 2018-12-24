@@ -57,7 +57,7 @@ public class InterfActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         if(actionBar !=null){
             actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeAsUpIndicator(R.drawable.daohh2);
+            actionBar.setHomeAsUpIndicator(R.drawable.daohh4);
         }
         initSizhs();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
