@@ -31,7 +31,7 @@ public class InterfActivity extends AppCompatActivity {
             new Sizh("test3",R.drawable.test3)};
     private List<Sizh> sizhList = new ArrayList<>();
     private SizhAdapter adapter;
-    private SwipeRefreshLayout swipeRefresh;
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -68,7 +68,7 @@ public class InterfActivity extends AppCompatActivity {
     }
     private void initSizhs() {
         sizhList.clear();
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 2; i++){
             Random random = new Random();
             int index = random.nextInt(sizhs.length);
             sizhList.add(sizhs[index]);

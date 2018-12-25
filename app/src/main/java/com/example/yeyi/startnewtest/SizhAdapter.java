@@ -23,10 +23,12 @@ public class SizhAdapter extends RecyclerView.Adapter<SizhAdapter.ViewHolder> {
         CardView cardView;
         ImageView sizhImage;
         TextView sizhName;
+        TextView sizhText;
 
         public ViewHolder(@NonNull View view) {
             super(view);
             cardView = (CardView) view;
+            sizhText = (TextView) view.findViewById(R.id.sizh_text);
             sizhImage = (ImageView) view.findViewById(R.id.sizh_image);
             sizhName = (TextView) view.findViewById(R.id.sizh_name);
         }
@@ -43,17 +45,17 @@ public class SizhAdapter extends RecyclerView.Adapter<SizhAdapter.ViewHolder> {
         }
         View view = LayoutInflater.from(mContext).inflate(R.layout.sizh_item,parent,false);
         final ViewHolder holder = new ViewHolder(view);
-//        holder.cardView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                int position = holder.getAdapterPosition();
-//                Sizh sizh = mSizhList.get(position);
-//                Intent intent = new Intent(mContext,SizhActivity.class);
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = holder.getAdapterPosition();
+                Sizh sizh = mSizhList.get(position);
+                Intent intent = new Intent(mContext,InInterface.class);
 //                intent.putExtra(SizhActivity.SIZH_NAME,sizh.getName());
 //                intent.putExtra(SizhActivity.SIZH_IMAGE_ID,sizh.getImageId());
-//                mContext.startActivity(intent);
-//            }
-//        });
+                mContext.startActivity(intent);
+            }
+        });
         return holder;
     }
 

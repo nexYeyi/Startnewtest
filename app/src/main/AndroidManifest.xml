@@ -22,7 +22,8 @@
         <activity
             android:name=".SignupActivity"
             android:theme="@style/AppTheme.Dark" />
-        <activity android:name=".InterfActivity"></activity>
+        <activity android:name=".InterfActivity" />
+        <activity android:name=".InInterface"></activity>
     </application>
 
 </manifest>
