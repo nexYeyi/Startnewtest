@@ -6,6 +6,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="primary">#E43F3F</color>
+    <color name="danwhite">#f6f7f9</color>
     <color name="primary_dark">#E12929</color>
     <!--<color name="primary_darker">#CC1D1D</color>-->
     <color name="primary_darker">#CC1D1D</color>

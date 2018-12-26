@@ -27,8 +27,7 @@ public class InterfActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
 
     private Sizh[] sizhs = {new Sizh("test1",R.drawable.test1),
-            new Sizh("test2",R.drawable.test2),
-            new Sizh("test3",R.drawable.test3)};
+            new Sizh("test2",R.drawable.test2),};
     private List<Sizh> sizhList = new ArrayList<>();
     private SizhAdapter adapter;
 
