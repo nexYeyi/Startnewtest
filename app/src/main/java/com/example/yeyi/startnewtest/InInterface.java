@@ -18,7 +18,7 @@ public class InInterface extends AppCompatActivity {
     private Sizh[] sizhs = {new Sizh("test1",R.drawable.test1),
             new Sizh("test2",R.drawable.test2)};
     private List<Sizh> sizhList = new ArrayList<>();
-    private SizhAdapter adapter;
+    private EAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class InInterface extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         GridLayoutManager layoutManager = new GridLayoutManager(this,1);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new SizhAdapter(sizhList);
+        adapter = new EAdapter(sizhList);
         recyclerView.setAdapter(adapter);
     }
     private void initSizhs() {
