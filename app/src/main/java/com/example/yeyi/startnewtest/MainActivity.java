@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private long firstPressedTime;
 
 
-
     @Override
     public void onBackPressed() {
         if(System.currentTimeMillis() - firstPressedTime < 2000){
