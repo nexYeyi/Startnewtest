@@ -12,8 +12,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.Dark"
-            >
+            android:theme="@style/AppTheme.Dark">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,10 +22,14 @@
         <activity
             android:name=".SignupActivity"
             android:theme="@style/AppTheme.Dark" />
-        <activity android:name=".InterfActivity"
+        <activity
+            android:name=".InterfActivity"
             android:theme="@style/AppTheme.ONE" />
-        <activity android:name=".InInterface"
-            android:theme="@style/AppTheme.ONE"></activity>
+        <activity
+            android:name=".InInterface"
+            android:theme="@style/AppTheme.ONE" />
+        <activity android:name=".SizhActivity" />
+        <activity android:name=".ApplyActivity"></activity>
     </application>
 
 </manifest>

@@ -35,28 +35,6 @@ public class InterfActivity extends AppCompatActivity {
     private List<Sizh> sizhList = new ArrayList<>();
     private SizhAdapter adapter;
 
-//    public static void setColor(Activity activity, int color) {
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//            View statusView = createStatusView(activity, color);
-//            ViewGroup decorView = (ViewGroup) activity.getWindow().getDecorView();
-//            decorView.addView(statusView);
-//            ViewGroup rootView = (ViewGroup) ((ViewGroup) activity.findViewById(android.R.id.content)).getChildAt(0);
-//            rootView.setFitsSystemWindows(true);
-//            rootView.setClipToPadding(true);
-//        }
-//    }
-//    private static View createStatusView(Activity activity, int color) {
-//        int resourceId = activity.getResources().getIdentifier("status_bar_height", "dimen", "android");
-//        int statusBarHeight = activity.getResources().getDimensionPixelSize(resourceId);
-//        View statusView = new View(activity);
-//        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-//                statusBarHeight);
-//        statusView.setLayoutParams(params);
-//        statusView.setBackgroundColor(color);
-//        return statusView;
-//    }
-
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -68,29 +46,12 @@ public class InterfActivity extends AppCompatActivity {
             firstPressedTime = System.currentTimeMillis();
         }
     }
-    private void setStatusBarVisible(boolean show) {
-        if (show) {
-            int uiFlags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            uiFlags |= 0x00001000;
-            getWindow().getDecorView().setSystemUiVisibility(uiFlags);
-        } else {
-            int uiFlags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_FULLSCREEN;
-            uiFlags |= 0x00001000;
-            getWindow().getDecorView().setSystemUiVisibility(uiFlags);
-        }
-    }
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interf);
-        this.setTitle("");
+        this.setTitle("黄铁铁");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
