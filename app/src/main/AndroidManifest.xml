@@ -27,9 +27,9 @@
             android:theme="@style/AppTheme.ONE" />
         <activity
             android:name=".InInterface"
-            android:theme="@style/AppTheme.ONE" />
-        <activity android:name=".SizhActivity" />
-        <activity android:name=".ApplyActivity"></activity>
+            android:theme="@style/AppTheme.TWO" />
+        <activity android:name=".ApplyActivity"
+            android:theme="@style/AppTheme.ONE"></activity>
     </application>
 
 </manifest>

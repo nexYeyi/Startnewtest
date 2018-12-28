@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme.ONE" parent="SizhActivityTheme">
+    <style name="AppTheme.TWO" parent="IninterfaceTheme">
+
+    </style>
+
+    <style name="AppTheme.ONE" parent="IninterfaceTheme">
         <item name="android:statusBarColor">@color/colorblue</item>
     </style>
 

@@ -12,8 +12,10 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,6 +28,7 @@ import java.util.Random;
 public class InInterface extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private FloatingActionButton mButton;
+    private TextView huadon;
 //    private List<Sizh> sizhList = new ArrayList<>();
 //    private SizhAdapter adapter;
 
@@ -34,10 +37,14 @@ public class InInterface extends AppCompatActivity {
 public static final String SIZH_NAME = "sizh_name";
     public static final String SIZH_IMAGE_ID = "sizh_image_id";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_interface);
+        huadon = (TextView) findViewById(R.id.huadon);
+        huadon.setOnTouchListener(touchListener);
+        huadon.setMovementMethod(ScrollingMovementMethod.getInstance());
         mButton = (FloatingActionButton) findViewById(R.id.shouzhi);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +56,6 @@ public static final String SIZH_NAME = "sizh_name";
         Intent intent = getIntent();
         String sizhName = intent.getStringExtra(SIZH_NAME);
         int sizhImageId = intent.getIntExtra(SIZH_IMAGE_ID,0);
-        Log.d("Deer404",""+sizhImageId);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         ImageView sizhImageView = (ImageView) findViewById(R.id.sizh_image_view);
@@ -65,13 +71,32 @@ public static final String SIZH_NAME = "sizh_name";
         sizhContentText.setText(sizhContent);
     }
 
+
+    private View.OnTouchListener touchListener = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            if(event.getAction() == MotionEvent.ACTION_DOWN
+                    || event.getAction() == MotionEvent.ACTION_MOVE){
+                //按下或滑动时请求父节点不拦截子节点
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+            }
+            if(event.getAction() == MotionEvent.ACTION_UP){
+                //抬起时请求父节点拦截子节点
+                v.getParent().requestDisallowInterceptTouchEvent(false);
+            }
+            return false;
+        }
+    };
+
+
     private String generateSizhContent(String sizhName) {
         StringBuilder sizhContent = new StringBuilder();
-        for(int i = 0; i < 500 ; i++){
+        for(int i = 0; i < 200 ; i++){
             sizhContent.append(sizhName);
         }
         return sizhContent.toString();
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -82,4 +107,5 @@ public static final String SIZH_NAME = "sizh_name";
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
