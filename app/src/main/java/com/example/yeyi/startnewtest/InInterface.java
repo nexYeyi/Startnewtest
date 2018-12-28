@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ public class InInterface extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private FloatingActionButton mButton;
     private TextView huadon;
+    private TextView huadon2;
 //    private List<Sizh> sizhList = new ArrayList<>();
 //    private SizhAdapter adapter;
 
@@ -42,9 +44,20 @@ public static final String SIZH_NAME = "sizh_name";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_interface);
+        Button finish = (Button) findViewById(R.id.finish);
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InInterface.this,ApplyActivity.class);
+                startActivity(intent);
+            }
+        });
         huadon = (TextView) findViewById(R.id.huadon);
         huadon.setOnTouchListener(touchListener);
         huadon.setMovementMethod(ScrollingMovementMethod.getInstance());
+        huadon2 = (TextView) findViewById(R.id.huadon2);
+        huadon2.setOnTouchListener(touchListener);
+        huadon2.setMovementMethod(ScrollingMovementMethod.getInstance());
         mButton = (FloatingActionButton) findViewById(R.id.shouzhi);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +104,7 @@ public static final String SIZH_NAME = "sizh_name";
 
     private String generateSizhContent(String sizhName) {
         StringBuilder sizhContent = new StringBuilder();
-        for(int i = 0; i < 200 ; i++){
+        for(int i = 0; i < 500 ; i++){
             sizhContent.append(sizhName);
         }
         return sizhContent.toString();
