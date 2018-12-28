@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
@@ -82,6 +84,19 @@ public static final String SIZH_NAME = "sizh_name";
         Glide.with(this).load(sizhImageId).into(sizhImageView);
         String sizhContent = generateSizhContent(sizhName);
         sizhContentText.setText(sizhContent);
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final NestedScrollView nestedScrollView = findViewById(R.id.bighuadong);
+                nestedScrollView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        nestedScrollView.fullScroll(NestedScrollView.FOCUS_UP);
+                    }
+                });
+            }
+        });
     }
 
 
