@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,6 +51,10 @@ public class SizhAdapter extends RecyclerView.Adapter<SizhAdapter.ViewHolder> {
                 int position = holder.getAdapterPosition();
                 Sizh sizh = mSizhList.get(position);
                 Intent intent = new Intent(mContext,InInterface.class);
+                String a =sizh.getName();
+                Log.e("Deer404",a);
+                intent.putExtra(InInterface.SIZH_NAME,sizh.getName());
+                intent.putExtra(InInterface.SIZH_IMAGE_ID,sizh.getImageId());
 //                intent.putExtra(SizhActivity.SIZH_NAME,sizh.getName());
 //                intent.putExtra(SizhActivity.SIZH_IMAGE_ID,sizh.getImageId());
                 mContext.startActivity(intent);

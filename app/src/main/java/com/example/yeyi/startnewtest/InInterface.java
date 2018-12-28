@@ -49,6 +49,7 @@ public static final String SIZH_NAME = "sizh_name";
         Intent intent = getIntent();
         String sizhName = intent.getStringExtra(SIZH_NAME);
         int sizhImageId = intent.getIntExtra(SIZH_IMAGE_ID,0);
+        Log.d("Deer404",""+sizhImageId);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         ImageView sizhImageView = (ImageView) findViewById(R.id.sizh_image_view);
