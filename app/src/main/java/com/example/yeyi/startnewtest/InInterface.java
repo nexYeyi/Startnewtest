@@ -32,7 +32,7 @@ public class InInterface extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private FloatingActionButton mButton;
     private TextView huadon;
-    private TextView huadon2;
+
 //    private List<Sizh> sizhList = new ArrayList<>();
 //    private SizhAdapter adapter;
 
@@ -57,9 +57,7 @@ public static final String SIZH_NAME = "sizh_name";
         huadon = (TextView) findViewById(R.id.huadon);
         huadon.setOnTouchListener(touchListener);
         huadon.setMovementMethod(ScrollingMovementMethod.getInstance());
-        huadon2 = (TextView) findViewById(R.id.huadon2);
-        huadon2.setOnTouchListener(touchListener);
-        huadon2.setMovementMethod(ScrollingMovementMethod.getInstance());
+
         mButton = (FloatingActionButton) findViewById(R.id.shouzhi);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
