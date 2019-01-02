@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +16,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +71,24 @@ public class InterfActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         adapter = new SizhAdapter(sizhList);
         recyclerView.setAdapter(adapter);
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.logout:
+                        Intent intent = new Intent(InterfActivity.this,MainActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.xiugai:
+                        Toast.makeText(InterfActivity.this,"没做",Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        break;
+                }
+
+                return true;
+            }
+        });
     }
     private void initSizhs() {
         sizhList.clear();

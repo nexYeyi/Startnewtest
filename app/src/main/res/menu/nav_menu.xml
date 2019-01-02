@@ -16,7 +16,7 @@
         </item>
 
         <item
-            android:id="@+id/tuideng"
+            android:id="@+id/logout"
             android:title="退出登录">
 
         </item>
