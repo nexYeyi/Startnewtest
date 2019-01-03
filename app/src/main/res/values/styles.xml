@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme.TWO" parent="IninterfaceTheme">
 
-    </style>
 
     <style name="AppTheme.ONE" parent="IninterfaceTheme">
         <item name="android:statusBarColor">@color/colorblue</item>
@@ -19,7 +17,7 @@
 
     <style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@color/colorblue</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
 
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
@@ -29,7 +27,7 @@
 
         <item name="colorPrimary">@color/colorblue</item>
         <item name="colorPrimaryDark">@color/colorblue</item>
-        <item name="colorAccent">@color/accent</item>
+        <item name="colorAccent">@color/colorPrimary</item>
 
         <item name="android:windowBackground">@color/colorblue</item>
 
@@ -40,6 +38,8 @@
 
         <item name="colorButtonNormal">@color/colorshenblue</item>
         <item name="android:colorButtonNormal">@color/test3</item>
+    </style>
+    <style name="AppTheme.TWO" parent="AppTheme.Dark">
     </style>
 
 

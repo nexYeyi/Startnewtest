@@ -60,6 +60,7 @@ public class InterfActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navView = (NavigationView) findViewById(R.id.nav_view);
+        navView.setCheckedItem(R.id.shouye);
         ActionBar actionBar = getSupportActionBar();
         if(actionBar !=null){
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -68,7 +69,7 @@ public class InterfActivity extends AppCompatActivity {
         initSizhs();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         GridLayoutManager layoutManager = new GridLayoutManager(this,1);
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);   
         adapter = new SizhAdapter(sizhList);
         recyclerView.setAdapter(adapter);
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -78,6 +79,8 @@ public class InterfActivity extends AppCompatActivity {
                     case R.id.logout:
                         Intent intent = new Intent(InterfActivity.this,MainActivity.class);
                         startActivity(intent);
+                        Toast.makeText(InterfActivity.this,"退出成功",Toast.LENGTH_SHORT).show();
+                        finish();
                         break;
                     case R.id.xiugai:
                         Toast.makeText(InterfActivity.this,"没做",Toast.LENGTH_SHORT).show();
